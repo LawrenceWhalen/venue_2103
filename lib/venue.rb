@@ -4,9 +4,9 @@ class Venue
               :patrons
 
   def initialize(name, capacity)
-    @name = name
+    @name     = name
     @capacity = capacity
-    @patrons = []
+    @patrons  = []
   end
 
   def add_patron(patron_name)
