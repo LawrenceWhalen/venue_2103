@@ -48,11 +48,15 @@ class Venue
   end
 
   def yell_at_patrons
-    @patrons_upcase = []
-    @patrons.each do |patron|
-      @patrons_upcase.push(patron.upcase!)
-    end
+    @patrons.map { |patron| patron.upcase!  }
   end
+
+  # def yell_at_patrons
+  #   @patrons_upcase = []
+  #   @patrons.each do |patron|
+  #     @patrons_upcase.push(patron.upcase!)
+  #   end
+  # end
 
   def over_capacity
     @patrons.count > @capacity
